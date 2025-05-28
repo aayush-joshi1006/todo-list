@@ -28,7 +28,7 @@ function ToDoList() {
       // updating the todo and setting the completed state as false
       const updatedList = todoList.map((todo) => {
         if (todo.id === editingId) {
-          return { ...todo, task: currentTodo, completed: false };
+          return { ...todo, task: currentTodo };
         }
         return todo;
       });
@@ -102,7 +102,7 @@ function ToDoList() {
   return (
     <>
       <div className="min-h-[80vh] flex items-center justify-center">
-        <div className="w-[60vw] min-h-[70vh] flex items-center justify-center flex-col bg-[#8DD8FF] text-[#5409DA] p-8 rounded-2xl border-2  backdrop-saturate-125 cursor-pointer drop-shadow-xl/50 transition duration-500 hover:-translate-y-0.5 mx-2">
+        <div className="xl:min-w-[60vw] min-w-[80vw]  min-h-[70vh] flex items-center justify-center flex-col bg-[#8DD8FF]/40 backdrop-brightness-90 text-[#5409DA] p-8 rounded-2xl border-2  backdrop-saturate-125 cursor-pointer drop-shadow-xl/50 transition duration-500 hover:-translate-y-0.5 mx-2">
           <div className="w-full flex justify-center items-center gap-3 py-7">
             {/* input field for entering todo task */}
             <input

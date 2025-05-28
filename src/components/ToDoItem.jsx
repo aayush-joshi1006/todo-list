@@ -19,8 +19,8 @@ function ToDoItem(props) {
           <span
             className={
               props.listItem.completed
-                ? "text-green-400 line-through"
-                : "text-red-700"
+                ? "text-green-400 line-through text-center"
+                : "text-red-700 text-center"
             }
           >
             {props.listItem.task}
