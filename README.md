@@ -67,8 +67,10 @@ npm run dev
 
 - Extend animations via Tailwind config or integrate Framer Motion for smoother transitions.
 
-## License
+## Contact
 
-This project is licensed under the MIT License.
+#### Developed by Aayush Joshi
 
-Built with Love by Aayush Joshi
+#### Project link:- [https://github.com/aayush-joshi1006/todo-list.git](https://github.com/aayush-joshi1006/todo-list.git)
+
+#### Feel free to reach out for feedback or collaboration!
