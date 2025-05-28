@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.blue-button {
+  @apply bg-[#5409DA] text-[#BBFBFF] p-3 font-extrabold text-2xl rounded-xl drop-shadow-xl/50 transition duration-500 hover:-translate-y-1;
+}
+
+.red-button {
+    @apply p-1.5 bg-red-700 text-white rounded-full drop-shadow-lg/50 transition duration-500 hover:-translate-y-0.5 font-extrabold
+}
