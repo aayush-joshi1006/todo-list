@@ -1,3 +1,4 @@
+// imports for icons from the react-icon library
 import { MdEdit } from "react-icons/md";
 import { MdOutlineDelete } from "react-icons/md";
 import { IoCheckmarkDoneSharp } from "react-icons/io5";
@@ -6,15 +7,16 @@ import { IoCheckmarkDoneSharp } from "react-icons/io5";
 function ToDoItem(props) {
   return (
     <>
+      {/* container for todo item */}
       <div
         onClick={(e) => {
           if (e.target.tagName !== "BUTTON") {
             props.isCompletedTodo(props.listItem.id);
           }
         }}
-        className="w-full flex justify-between items-center px-5 py-3 rounded-xl bg-[#BBFBFF] my-4 drop-shadow-xl/50 transition duration-500 hover:-translate-y-0.5 gap-2"
+        className="todo-style"
       >
-        {/* span for displaying the todo */}
+        {/* block for displaying the todo */}
         <div className="flex justify-between items-center  w-[90%]">
           <span
             className={
@@ -25,7 +27,7 @@ function ToDoItem(props) {
           >
             {props.listItem.task}
           </span>
-          {/* button for changing the status of todo  */}
+          {/* button for changing the status of todo and showing its status */}
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -35,7 +37,6 @@ function ToDoItem(props) {
               props.listItem.completed ? "text-blue-600" : "text-gray-400"
             }`}
           >
-            {/* {props.listItem.completed ? "completed" : "pending"} */}
             <IoCheckmarkDoneSharp />
           </button>
         </div>

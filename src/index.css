@@ -1,9 +1,26 @@
 @import "tailwindcss";
 
+/* styling for the blue buttons */
 .blue-button {
   @apply bg-[#5409DA] text-[#BBFBFF] p-3 font-extrabold text-2xl rounded-xl drop-shadow-xl/50 transition duration-500 hover:-translate-y-1;
 }
 
+/* styling for the red buttons */
 .red-button {
-    @apply p-1.5 bg-red-700 text-white rounded-full drop-shadow-lg/50 transition duration-500 hover:-translate-y-0.5 font-extrabold
+  @apply p-1.5 bg-red-700 text-white rounded-full drop-shadow-lg/50 transition duration-500 hover:-translate-y-0.5 font-extrabold;
+}
+
+/* styling for the main block  */
+.main-block {
+  @apply xl:min-w-[60vw] min-w-[80vw]  min-h-[70vh] flex items-center justify-center flex-col bg-blue-400/40 backdrop-brightness-90 text-[#5409DA] p-8 rounded-2xl border-2  backdrop-saturate-125 cursor-pointer drop-shadow-xl/50 transition duration-500 hover:-translate-y-0.5 mx-2;
+}
+
+/* styling for the input field */
+.input-block {
+  @apply transition duration-500 hover:-translate-y-0.5 outline-none px-5 py-2 text-xl drop-shadow-xl/50 bg-[#BBFBFF] rounded-xl text-gray-600 min-w-[40vw];
+}
+
+/* styling for the indivisual todo item  */
+.todo-style {
+    @apply w-full flex justify-between items-center px-5 py-3 rounded-xl bg-[#BBFBFF] my-4 drop-shadow-xl/50 transition duration-500 hover:-translate-y-0.5 gap-2
 }

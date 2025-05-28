@@ -28,7 +28,7 @@ A clean, interactive and responsive Todo List web application built using **Reac
 ```bash
 src/
 ├── components/
-| ├── Header.jsx # Renders Header component
+│ ├── Header.jsx # Renders Header component
 │ ├── ToDoItem.jsx # Renders individual todo items
 │ └── ToDoList.jsx # Main todo list component
 ├── App.jsx # App root
@@ -41,7 +41,7 @@ src/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/aayush-joshi1006/todo-list.git
    cd todo-app
    ```
 

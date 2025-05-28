@@ -1,5 +1,7 @@
 import ToDoItem from "./ToDoItem";
 import { useState } from "react";
+
+// imports of icons from react icon library for different icons
 import { IoMdAdd } from "react-icons/io";
 import { GrUpdate } from "react-icons/gr";
 import { MdOutlineClear } from "react-icons/md";
@@ -34,8 +36,7 @@ function ToDoList() {
       });
 
       // updating the todo list in the state and in the local storage
-      setTodoList(updatedList);
-      localStorage.setItem("todo-list", JSON.stringify(updatedList));
+      updateTodos(updatedList);
 
       // clearing the input field
       setCurrentTodo("");
@@ -55,8 +56,7 @@ function ToDoList() {
 
       // updating the todo list in the state and in the local storage
       const updatedList = [...todoList, todoObj];
-      localStorage.setItem("todo-list", JSON.stringify(updatedList));
-      setTodoList(updatedList);
+      updateTodos(updatedList);
       // clearing the input field and throwing the alert for added todo
       setCurrentTodo("");
       alert("Todo Added");
@@ -77,8 +77,7 @@ function ToDoList() {
 
     // updating the todo list in the state and in the local storage
     let updatedList = todoList.filter((todo) => todo.id !== id);
-    localStorage.setItem("todo-list", JSON.stringify(updatedList));
-    setTodoList(updatedList);
+    updateTodos(updatedList);
 
     // alert for deleting the todo from todo list
     alert("Todo Deleted");
@@ -95,20 +94,25 @@ function ToDoList() {
     });
 
     // updating the todo list in the state and in the local storage
-    setTodoList(updatedList);
-    localStorage.setItem("todo-list", JSON.stringify(updatedList));
+    updateTodos(updatedList);
+  }
+
+  // function for updating the the state of todo list and updating that list in the local storage
+  function updateTodos(todos) {
+    setTodoList(todos);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
   }
 
   return (
     <>
       <div className="min-h-[80vh] flex items-center justify-center">
-        <div className="xl:min-w-[60vw] min-w-[80vw]  min-h-[70vh] flex items-center justify-center flex-col bg-[#8DD8FF]/40 backdrop-brightness-90 text-[#5409DA] p-8 rounded-2xl border-2  backdrop-saturate-125 cursor-pointer drop-shadow-xl/50 transition duration-500 hover:-translate-y-0.5 mx-2">
+        <div className="main-block">
           <div className="w-full flex justify-center items-center gap-3 py-7">
             {/* input field for entering todo task */}
             <input
               type="text"
               value={currentTodo}
-              className="transition duration-500 hover:-translate-y-0.5 outline-none px-5 py-2 text-xl drop-shadow-xl/50 bg-[#BBFBFF] rounded-xl text-gray-600 min-w-[40vw]"
+              className="input-block"
               onChange={(e) => setCurrentTodo(e.target.value)}
             />
             {/* button for editing or adding a todo task */}
